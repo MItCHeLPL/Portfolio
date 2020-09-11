@@ -1,0 +1,233 @@
+/*Colors and text*/
+body
+{
+    color: white;
+    background-color: black;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+.accentColor
+{
+    background-color: #808080;
+}
+
+.backgroundImage
+{
+    background-color: black;
+}
+
+
+/*Animations*/
+/*OnEnter*/
+@keyframes OnEnterBackground
+{
+    0%
+    {
+        filter: blur(0px);
+        opacity: 1;
+    }
+
+    25%
+    {
+        filter: blur(0px);
+        opacity: 1;
+    }
+
+    100%
+    {
+        filter: blur(10px);
+        opacity: .6;
+    }
+}
+@keyframes OnEnterContent
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    50%
+    {
+        opacity: 0;
+        filter: blur(1px);
+    }
+
+    100%
+    {
+        position: fixed;
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+
+/*Styling*/
+/*Page*/
+html
+{
+    height: 100%;
+}
+
+body
+{
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+
+    background-attachment: fixed;
+}
+
+/*Background*/
+.backgroundImage
+{
+    margin:0 auto;
+    padding: 0;
+    clear: both;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    object-fit: cover;
+    object-position: 50% 50%;
+    
+    height:100%;
+    width:100%;
+
+    z-index: -1;
+
+    animation-name: OnEnterBackground;
+    animation-duration: 2s;
+
+    opacity: .6;
+    filter: blur(10px);
+}
+
+/*Bootstrap containers*/
+.container-fluid
+{
+    animation-name: OnEnterContent;
+    animation-duration: 3s;
+
+    opacity: 1;
+
+    padding: 0;
+
+    -ms-overflow-style: none!important;
+    scrollbar-width: none!important;
+}
+
+.align-items-center
+{
+    display: flex;
+}
+
+/*Sections*/
+/*Section content*/
+.section
+{
+    padding: 3em 1em 3em 1em;
+}
+
+/*Section background*/
+.sectionBackground
+{
+    height: 100%;
+
+    position: absolute;
+
+    z-index: 1;
+    background: inherit;
+
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+[class*="accentColor"][class*="sectionBackground"]::before
+{
+    content: "";
+    position: fixed;
+    background: inherit;
+    z-index: -1;
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.2);
+}
+
+.sectionBackground::-webkit-scrollbar 
+{
+    display: none;
+}
+
+/*Custom sections*/
+.leftBackground
+{
+    width: 33.3vw;
+    height: 100vh;
+
+    position: fixed!important;
+
+    padding-right:6em;
+    padding-left:1em;
+
+    margin-left:0;
+
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+.leftBackground::before
+{
+    position: fixed!important;
+}
+
+.rightBackground
+{
+    padding-left:6em;
+    padding-right:1em;
+
+    margin-right:0;
+
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/*Mobile*/
+@media only screen and (max-width: 1199px) 
+{
+    /*Sections*/
+    .sectionBackground
+    {
+        position: relative!important;
+        overflow: auto;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .leftBackground
+    {
+        padding-right:1em;
+        padding-left:1em;
+        padding-bottom: 15vw;
+
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); /*improve on mobile*/
+    }
+    .rightBackground
+    {
+        padding-left:1em;
+        padding-right:1em;
+        padding-top: 15vw;
+
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); /*improve on mobile*/
+    }
+
+    .section
+    {
+        padding-bottom: 1em;
+    }
+}
