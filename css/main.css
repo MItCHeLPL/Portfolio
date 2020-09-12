@@ -36,8 +36,8 @@ body
 
     100%
     {
-        filter: blur(10px);
-        opacity: .6;
+        filter: blur(4px);
+        opacity: .4;
     }
 }
 @keyframes OnEnterContent
@@ -89,8 +89,9 @@ body
     clear: both;
 
     position:fixed;
-    top:0;
-    left:0;
+
+    left:0%;
+    top:0%;
 
     object-fit: cover;
     object-position: 50% 50%;
@@ -103,8 +104,8 @@ body
     animation-name: OnEnterBackground;
     animation-duration: 2s;
 
-    opacity: .6;
-    filter: blur(10px);
+    filter: blur(4px);
+    opacity: .4;
 }
 
 /*Bootstrap containers*/
@@ -179,7 +180,7 @@ body
 
     margin-left:0;
 
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, calc(100% - 100px) 100%, 0% 100%);
 }
 .leftBackground::before
 {
@@ -193,7 +194,7 @@ body
 
     margin-right:0;
 
-    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(100px 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 /*Mobile*/
@@ -213,17 +214,17 @@ body
     {
         padding-right:1em;
         padding-left:1em;
-        padding-bottom: 15vw;
+        padding-bottom:3em;
 
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); /*improve on mobile*/
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), 0% 100%); /*improve on mobile*/
     }
     .rightBackground
     {
         padding-left:1em;
         padding-right:1em;
-        padding-top: 15vw;
+        padding-top:2em;
 
-        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); /*improve on mobile*/
+        clip-path: polygon(0 30px, 100% 0, 100% 100%, 0 100%); /*improve on mobile*/
     }
 
     .section
