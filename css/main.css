@@ -17,6 +17,23 @@ body
     background-color: black;
 }
 
+h4
+{
+    color: #b4b4b4;
+}
+
+/*Footer*/
+footer
+{
+    text-align: center;
+    font-size: 14px;
+    color: #838383;
+}
+footer, footer a:visited, footer a:link
+{
+    color: #838383;
+}
+
 
 /*Animations*/
 /*OnEnter*/
@@ -58,6 +75,19 @@ body
         position: fixed;
         opacity: 1;
         filter: blur(0px);
+    }
+}
+
+@keyframes SocialOnHover
+{
+    0%
+    {
+       
+    }
+
+    100%
+    {
+        
     }
 }
 
@@ -132,6 +162,7 @@ body
 .section
 {
     padding: 3em 1em 3em 1em;
+    text-align: center;
 }
 
 /*Section background*/
@@ -170,7 +201,7 @@ body
 /*Custom sections*/
 .leftBackground
 {
-    width: 33.3vw;
+    width: 33.3%;
     height: 100vh;
 
     position: fixed!important;
@@ -197,6 +228,54 @@ body
     clip-path: polygon(100px 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+/*Other*/
+.logoImg
+{
+    width: 15em;
+    height: auto;
+    
+    margin-bottom: 1em;
+
+    border: 3px solid #b4b4b4;
+}
+
+.aboutMe
+{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+
+.socialButtonsHolder
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.socialButton
+{
+    float:left;
+
+    width:2.5em;
+    height:auto;
+
+    margin: .25em;
+}
+.socialButton:hover
+{
+    animation: .5s OnSocialHover;
+}
+
+footer
+{
+    position: relative;
+    margin: 0 auto;
+    width:100%;
+
+    margin-top: 10em;
+}
+
 /*Mobile*/
 @media only screen and (max-width: 1199px) 
 {
@@ -216,8 +295,11 @@ body
         padding-left:1em;
         padding-bottom:3em;
 
+        width: 100%;
+
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), 0% 100%); /*improve on mobile*/
     }
+     
     .rightBackground
     {
         padding-left:1em;
@@ -229,6 +311,7 @@ body
 
     .section
     {
+        width:100%;
         padding-bottom: 1em;
     }
 }
