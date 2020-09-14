@@ -1,0 +1,47 @@
+<div class=" d-flex h-100 align-items-center">
+    <div class="section">
+
+        <img src="images/logo.png" alt="logo" class="rounded-circle logoImg" />
+
+        <h1>Michał Myszor</h1>
+        <h4><i>MItCHeL</i></h4>
+        
+        <p class="aboutMe">
+            #ABOUTME#<br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.
+        </p>
+
+        <!--Social media buttons-->
+        <span class="socialButtonsHolder d-flex justify-content-center">
+            <a href="mailto:mikemyszor@gmail.com"><img src="images/social/mail_black.svg" alt="Mail" title="mikemyszor@gmail.com" class="socialButton" onmouseover="this.src='images/social/mail.svg';" onmouseout="this.src='images/social/mail_black.svg';" /></a> <!--TODO add mailto-->
+            <a href="#"><img src="images/social/git_black.svg" alt="GitHub" title="GitHub" class="socialButton" onmouseover="this.src='images/social/git.svg';" onmouseout="this.src='images/social/git_black.svg';" /></a> 
+            <a href="#"><img src="images/social/linkedin_black.svg" alt="LinkedIn" title="LinkedIn" class="socialButton" onmouseover="this.src='images/social/linkedin.svg';" onmouseout="this.src='images/social/linkedin_black.svg';" /></a>
+            <a href="#"><img src="images/social/yt_black.svg" alt="YouTube" title="YouTube" class="socialButton" onmouseover="this.src='images/social/yt.svg';" onmouseout="this.src='images/social/yt_black.svg';" /></a>
+            <a href="#"><img src="images/social/insta_black.svg" alt="Instagram" title="Instagram" class="socialButton" onmouseover="this.src='images/social/insta.svg';" onmouseout="this.src='images/social/insta_black.svg';" /></a>
+            <a href="#"><img src="images/social/pinterest_black.svg" alt="Pinterest" title="Pinterest" class="socialButton" onmouseover="this.src='images/social/pinterest.svg';" onmouseout="this.src='images/social/pinterest_black.svg';" /></a>
+            <a href="#"><img src="images/social/fb_black.svg" alt="Facebook" title="Facebook" class="socialButton" onmouseover="this.src='images/social/fb.svg';" onmouseout="this.src='images/social/fb_black.svg';" /></a>
+            <a href="#"><img src="images/social/twitter_black.svg" alt="Twitter" title="Twitter" class="socialButton" onmouseover="this.src='images/social/twitter.svg';" onmouseout="this.src='images/social/twitter_black.svg';" /></a>
+        </span>
+
+
+        <!--#TEMP# switch sections button-->
+        <button onclick="UpdateSection('right', 'projects/example-project.html', true); UpdateSection('left', 'project-list.html', false);">#TEMP#</button>
+
+
+
+        <footer>
+            <p>
+                © Copyright 
+                <!--Dynamic year-->
+                <span id="year">
+                    <script>
+                        let date = new Date();
+                        $("#year").html(date.getFullYear());
+                    </script>
+                </span>
+
+                , Michał Myszor
+            </p>
+        </footer>
+    </div>
+</div>
