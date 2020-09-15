@@ -81,6 +81,12 @@
                         </script>
 
                     </div>
+
+                    <button id="showAboutMe"
+                        onclick="UpdateSection('left', 'about-me.html', true); 
+                        UpdateSection('right', 'project-list.html', false); 
+                        ShowBackToAboutMe(false);"
+                    >#BACK#</button>
                 </div>
 
                 <!--Right-->
@@ -93,11 +99,29 @@
                         </script>
 
                     </div>
+
+                    <!--Footer at the end of page-->
+                    <footer class="page-footer">
+                        <div class="footer-copyright">
+                            © Copyright 
+                            <!--Dynamic year-->
+                            <span id="year">
+                                <script>
+                                    let date = new Date();
+                                    $("#year").html(date.getFullYear());
+                                </script>
+                            </span>
+            
+                            , Michał Myszor
+                        </div>
+                    </footer>
+
                 </div>
 
             </div>
         </div>
 
+        
 
         <!--JS Scripts-->
         <!--Bootstrap import-->

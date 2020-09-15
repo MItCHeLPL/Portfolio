@@ -261,13 +261,31 @@ body
     margin: .25em;
 }
 
+#showAboutMe
+{
+    position: absolute;
+
+    top:25px;
+    left:25px;
+
+    /*Hide by default*/
+    display:none;
+}
+
 footer
 {
-    position: relative;
+    position: fixed;
+    text-align: center;
     margin: 0 auto;
     width:100%;
 
-    margin-top: 10em;
+    /*Left 0 is middle because footer is in the right section*/
+    left: 0;
+
+
+    bottom: 10px;
+
+    z-index: 10;
 }
 
 /*Mobile*/
@@ -303,6 +321,8 @@ footer
         padding-right:1em;
         padding-top:2em;
 
+        padding-bottom: 4em;
+
         clip-path: polygon(0 30px, 100% 0, 100% 100%, 0 100%);
     }
 
@@ -310,5 +330,13 @@ footer
     {
         width:100%;
         padding-bottom: 1em;
+    }
+
+    footer
+    {
+        position: absolute;
+
+        margin-top:4em;
+        bottom: 10px;
     }
 }

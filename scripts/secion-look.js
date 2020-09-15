@@ -7,7 +7,7 @@ function UpdateSection(sectionId, contentUrl, showBackground)
     {
         classList.add("sectionBackground");
     }
-    else if(classList.contains("sectionBackground"))
+    else if(!showBackground && classList.contains("sectionBackground"))
     {
         classList.remove("sectionBackground");
     }
@@ -16,4 +16,16 @@ function UpdateSection(sectionId, contentUrl, showBackground)
 
     //load section content
     $('#'+sectionId).load(contentUrl);
+}
+
+function ShowBackToAboutMe(showAboutMeButton)
+{
+    if(showAboutMeButton)
+    {
+        document.getElementById('showAboutMe').style.display = "block";
+    }
+    else
+    {
+        document.getElementById('showAboutMe').style.display = "none";
+    }
 }
