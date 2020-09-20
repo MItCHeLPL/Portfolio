@@ -1,0 +1,18 @@
+RewriteEngine on
+
+RewriteCond %{HTTPS} off 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+Redirect 301 /asciiart https://www.mitchel.bbsch.pl/projects/asciiart/index.html
+
+Redirect 301 /asciibar https://www.mitchel.bbsch.pl/projects/asciibar/index.html
+
+Redirect 301 /dots https://www.mitchel.bbsch.pl/projects/dots/index.html
+
+Redirect 301 /hierarchytree https://www.mitchel.bbsch.pl/projects/hierarchytree/index.html
+
+Redirect 301 /hold https://www.mitchel.bbsch.pl/projects/hold/index.html
+
+Redirect 301 /naszaporadnia https://www.naszaporadnia.net/
+
+Redirect 301 /noise https://www.mitchel.bbsch.pl/projects/noise/index.html
