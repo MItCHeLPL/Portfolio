@@ -5,11 +5,11 @@ function UpdateSection(sectionId, contentUrl, showBackground)
 
     if(showBackground && !classList.contains("sectionBackground"))
     {
-        classList.add("sectionBackground");
+        classList.add("sectionBackground"); 
     }
     else if(!showBackground && classList.contains("sectionBackground"))
     {
-        classList.remove("sectionBackground");
+        classList.remove("sectionBackground"); 
     }
 
     //#TODO# add animation

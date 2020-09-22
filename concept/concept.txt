@@ -1,21 +1,17 @@
-Po załadowaniu animacja w css div z logiem mitchel opacity ze 100 do 0 i blur z 0 do takiego jaki jest na background div dla całej strony, jednocześnie div z całym contentem opacity z 0 do 1. Można też zrobić animacje loga z małego do większego takiego jaki jest na background.
-
-Przezroczystość i blur nakładek backgroundów segmentów taka jak w win10 tylko bardziej "szronowo-szklana" i mniejsze opacity (frosted glass effect z cieniem).
-
 Może jako background project page i project button blurred image i video, ew photo gallery.
 
-po załadowaniu project page i projects page zacząć na dole scrolla i strona scrolluje płynnie do góry.
-
-Tam gdzie w concepcie (linki) - monochromatyczne ikonki sociali i po najechaniu kolorowe.
+Po załadowaniu project page i projects page zacząć na dole scrolla i strona scrolluje płynnie do góry.
 
 Animowane strzałki na segmentach.
 
-Na Left gdy zacznie sie scrollować płynnie przejść na middle i kontynuwać scrollowanie.
+?Na Left gdy zacznie sie scrollować płynnie przejść na middle i kontynuwać scrollowanie.
 
-Użyć gdzieś longpress.
+?Użyć gdzieś longpress.
 
 Lekkie przesunięcia panelów na lewo i prawo przy hoverze.
 
 EN/PL.
 
 W main gamedev webdev i other potem poszczególe projekty.
+
+Animacje ładowania sekcji using jquery
