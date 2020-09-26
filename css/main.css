@@ -47,6 +47,12 @@ h4
     color: #b4b4b4;
 }
 
+.project-list a, .project-list a:visited, .project-list a:active, .arrow, .arrow:visited, .arrow:active, .arrow a, .arrow a:visited, .arrow a:active
+{
+    color: white;
+    text-decoration: none;
+}
+
 footer
 {
     text-align: center;
@@ -137,7 +143,12 @@ body
     background-attachment: fixed;
 }
 
-/*Background*/
+.mobile-only
+{
+    display: none;
+}
+
+/*BACKGROUND*/
 .backgroundImage
 {
     margin:0 auto;
@@ -184,9 +195,9 @@ body
     display: flex;
 }
 
-/*Sections*/
+/*SECTIONS*/
 /*Section content*/
-.section
+section
 {
     padding: 3em 1em 3em 1em;
     text-align: center;
@@ -246,7 +257,7 @@ body
     direction:ltr;
 }
 
-/*About me*/
+/*ABOUT ME*/
 .logoImg
 {
     width: 15em;
@@ -290,10 +301,46 @@ body
     top:25px;
     left:25px;
 
+    cursor: pointer;
+
     /*Hide by default*/
     display:none;
 }
 
+/*PROJECT LIST*/
+.projectList
+{
+    width: 100%;
+    height:100%;
+}
+
+.projectButton
+{
+    width: 80%;
+    height: 4em;
+
+    text-align: center;
+    font-size: 24px;
+
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1em;
+
+    border: solid 5px #808080;
+    border-radius: 15px;
+}
+.projectButtonBackground
+{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+/*FOOTER*/
 footer
 {
     position: fixed;
@@ -313,6 +360,12 @@ footer
 /*Mobile*/
 @media only screen and (max-width: 1199px) 
 {
+    .mobile-only
+    {
+        display: initial;
+    }
+
+    /*BACKGROUND*/
     .backgroundImage
     {
         width:60%;
@@ -324,7 +377,7 @@ footer
         -webkit-animation-duration: 2s;
     }
 
-    /*Sections*/
+    /*SECTIONS*/
     .sectionBackground
     {
         position: relative;
@@ -359,12 +412,13 @@ footer
         clip-path: polygon(0 30px, 100% 0, 100% 100%, 0 100%);
     }
 
-    .section
+    section
     {
         width:100%;
         padding-bottom: 1em;
     }
 
+    /*FOOTER*/
     footer
     {
         position: absolute;
