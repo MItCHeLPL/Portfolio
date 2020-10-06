@@ -190,6 +190,11 @@ body
     padding: 0;
 }
 
+#mainRow
+{
+    overflow-x: hidden;
+}
+
 .align-items-center
 {
     display: flex;
@@ -332,7 +337,7 @@ section
     border: solid 5px #808080;
     border-radius: 15px;
 }
-.projectButtonBackground
+.projectButtonBackground /*TODO IMPROVE THIS*/
 {
     z-index: 1;
     position: absolute;

@@ -68,7 +68,7 @@
         <!--Content-->
         <div class="container-fluid h-100">
             <!--Row-->
-            <div class="row justify-content-center d-flex h-100 no-gutters">
+            <div class="row justify-content-center d-flex h-100 no-gutters" id="mainRow">
 
                 <!--Left-->
                 <div class="col-xl-6 d-flex justify-content-center">
@@ -83,7 +83,7 @@
 
                     <!--Back to about me button-->
                     <div id="showAboutMe"
-                        onclick="UpdateSection('left', 'about-me.html', true); 
+                        onclick="UpdateSection('left', 'about-me.html', true, true); 
                         UpdateSection('right', 'project-list.html', false); 
                         ShowBackToAboutMe(false);">
                         <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
