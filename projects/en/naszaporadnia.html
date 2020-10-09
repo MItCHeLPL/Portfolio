@@ -7,37 +7,37 @@
     </div>
 
     <figure>
-        <!--Image-->
-        <a href="https://mitchel.bbsch.pl/dots">
-            <img src="images/projects/dots.jpg" alt="Preview" class="projectImg mobile-only"/>
+        <!--Image Mobile-->
+        <a href="https://mitchel.bbsch.pl/naszaporadnia">
+            <img src="images/projects/naszaporadnia.jpg" alt="Preview" class="projectImg mobile-only"/>
         </a>
-
-        <!--Webpage-->
-        <div class="projectImg video-container desktop-only">
-            <iframe width="900" height="600" src="https://mitchel.bbsch.pl/dots"></iframe>
+        
+        <!--Image desktop-->
+        <img src="images/projects/naszaporadnia.jpg" alt="Preview" class="projectImg desktop-only" title="Click to show interactive frame" onclick="ShowIframe(this, 'naszaporadniaIframe')"/>
+        <!--Website-->
+        <div class="projectImg video-container desktop-only" style="display:none;" id="naszaporadniaIframe">
+            <iframe width="900" height="600" src="https://mitchel.bbsch.pl/naszaporadnia"></iframe>
         </div>
 
         <figcaption>
-            <h1>Connecting Dots</h1>
+            <h1>Nasza Poradnia</h1>
         </figcaption>
     </figure>
 
     <article>
         <h2><u>Description</u></h2>
         <p>
-            Randomly moving dots connecting with their close relatives using lines.<br />
-            Simple visualizer created using HTML SVG and custom JavaScript.
+            Official webpage of <i>Nasza Poradnia Orzesze, Poland</i>
         </p>
     </article>
 
     <article>
-        <h2><u>Features</u></h2>
+        <h2><u>Technologies</u></h2>
         <ul>
-            <li>Change dot count</li>
-            <li>Change speed</li>
-            <li>Change distance to draw the line</li>
-            <li>Change dots and background color</li>
-            <li>Change dot and line size</li>
+            <li>Responsive Design</li>
+            <li>Custom PHP based dynamic prescription ordering</li>
+            <li>Custom JavaScript</li>
+            <li>Custom Styles</li>
         </ul>
     </article>
 
@@ -45,13 +45,13 @@
         <h2><u>Other</u></h2>
         <p>
             Status: <span style="color:green">FINISHED</span><br />
-            Created: 08/2020<br /><br />
-            <a href="https://mitchel.bbsch.pl/dots">Try it out!</a><br />
-            <a href="https://github.com/MItCHeLPL/Connecting-Dots">GitHub</a>
+            Created: 08/2019<br /><br />
+            <a href="https://mitchel.bbsch.pl/naszaporadnia">Try it out!</a><br />
         </p>
     </article>
         
-    <div onclick="ScrollTo('projectTop');" class="arrow" id="projectBottom" title="Back to top">
+
+    <div onclick="ScrollTo('projectTop');" class="arrow" id="projectBottom">
         <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
         </svg>

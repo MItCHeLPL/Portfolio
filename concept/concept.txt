@@ -1,5 +1,3 @@
-Jako background project page i project button blurred image i video, ew carousel.
-
 ?Animowane strzałki na segmentach.
 
 ?Użyć gdzieś longpress.

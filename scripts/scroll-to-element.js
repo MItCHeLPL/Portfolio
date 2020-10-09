@@ -15,7 +15,7 @@ function ScrollTo(id, smooth, timeout)
             {
                 elem.scrollIntoView();
             }
-        }, 20);
+        }, 100);
     }
     else
     {
