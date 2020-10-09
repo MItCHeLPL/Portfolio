@@ -1,17 +1,9 @@
-Może jako background project page i project button blurred image i video, ew photo gallery.
+Jako background project page i project button blurred image i video, ew carousel.
 
-Po załadowaniu project page i projects page zacząć na dole scrolla i strona scrolluje płynnie do góry.
-
-Animowane strzałki na segmentach.
-
-?Na Left gdy zacznie sie scrollować płynnie przejść na middle i kontynuwać scrollowanie.
+?Animowane strzałki na segmentach.
 
 ?Użyć gdzieś longpress.
 
-Lekkie przesunięcia panelów na lewo i prawo przy hoverze.
+?Lekkie przesunięcia panelów na lewo i prawo przy hoverze.
 
 EN/PL.
-
-W main gamedev webdev i other potem poszczególe projekty.
-
-Animacje ładowania sekcji using jquery

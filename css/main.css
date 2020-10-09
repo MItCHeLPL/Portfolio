@@ -1,4 +1,15 @@
 /*Colors and text*/
+::-moz-selection 
+{
+    color: white;
+    background: #6d6d6d;
+}
+::selection 
+{
+    color: white;
+    background: #6d6d6d;
+}
+
 body
 {
     color: white;
@@ -143,11 +154,6 @@ body
     background-attachment: fixed;
 }
 
-.mobile-only
-{
-    display: none;
-}
-
 /*BACKGROUND*/
 .backgroundImage
 {
@@ -271,6 +277,10 @@ section
     margin-bottom: 1em;
 
     border: 3px solid #b4b4b4;
+
+    -webkit-filter: drop-shadow(0 0 5px #000000);
+    filter: drop-shadow(0 0 5px #000000);
+
 }
 
 .aboutMe
@@ -284,20 +294,30 @@ section
 
 .socialButtonsHolder
 {
-    display: block;
+    margin:0 auto;
+    padding: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    list-style: none;
 }
 .socialButton
 {
-    float:left;
-
     width:2.5em;
     height:auto;
 
+    flex: 0 0 200px;
+
     margin: .25em;
 }
+.socialButton:after{
+    content:'';
+    flex-grow: 1000000000;
+  }
 
 #showAboutMe
 {
@@ -319,6 +339,12 @@ section
     height:100%;
 }
 
+#project-listTop h1
+{
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
 .projectButton
 {
     width: 80%;
@@ -334,15 +360,94 @@ section
 
     margin-bottom: 1em;
 
-    border: solid 5px #808080;
-    border-radius: 15px;
+    -webkit-filter: drop-shadow(0 0 5px #000000);
+    filter: drop-shadow(0 0 5px #000000);
+
+    z-index: 3;
+
+    cursor: pointer;
 }
-.projectButtonBackground /*TODO IMPROVE THIS*/
+.projectButton .projectButtonBackground, .projectButton .projectButtonTop
 {
-    z-index: 1;
     position: absolute;
+
     width: 100%;
+    height: 100%;
+
+    border: solid 5px #ffffff;
+
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.projectButtonTop
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+
+    z-index: 3;
+
+    -webkit-backdrop-filter: blur(2px) brightness(60%);
+    backdrop-filter: blur(2px) brightness(60%);
+}
+.projectButtonBackground
+{
+    z-index: 2;
+
+    background-position: center;
+    background-size: cover;
+}
+.projectButtonTop:hover
+{
+    -webkit-backdrop-filter: blur(0px) brightness(100%);
+    backdrop-filter: blur(0px) brightness(100%);
+}
+
+.projectImg
+{
+    width:100%;
     height: auto;
+
+    border: solid 5px #ffffff;
+
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.project h1
+{
+    margin-bottom: 1em;
+}
+.project ul
+{
+    display: inline-block; 
+	text-align: left; 
+}
+.project a, .project .arrow:visited
+{
+    text-decoration: underline;
+    color:#858585
+}
+
+.arrow
+{
+    margin-top:1em;
+    display:flex;
+    width:100%;
+    justify-content:center;
+
+    cursor: pointer;
 }
 
 /*FOOTER*/
@@ -362,12 +467,17 @@ footer
     z-index: 10;
 }
 
+.mobile-only
+{
+    display: none!important;
+}
+
 /*Mobile*/
 @media only screen and (max-width: 1199px) 
 {
-    .mobile-only
+    ::-webkit-scrollbar-track 
     {
-        display: initial;
+        background: rgba(255,255,255,0);
     }
 
     /*BACKGROUND*/
@@ -423,6 +533,17 @@ footer
         padding-bottom: 1em;
     }
 
+    .logoImg
+    {
+        width:10em;
+    }
+
+    .arrow
+    {
+        margin-top:1em;
+        margin-bottom:1em;
+    }
+
     /*FOOTER*/
     footer
     {
@@ -430,5 +551,10 @@ footer
 
         margin-top:4em;
         bottom: 10px;
+    }
+
+    .mobile-only
+    {
+        display: block!important;
     }
 }

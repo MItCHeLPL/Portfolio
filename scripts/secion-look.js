@@ -110,19 +110,6 @@ function SlideIn(duration, timeout)
     );
 }
 
-//Detect when using mobile
-function isMobile()
-{
-    if( $('.mobile-only').css('display')=='none') 
-    {
-        return false;       
-    }
-    else
-    {
-        return true;
-    }
-}
-
 function disableXScroll() 
 { 
     // Get the current page scroll position 
