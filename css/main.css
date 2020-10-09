@@ -288,8 +288,8 @@ section
     margin: auto;
     width: 70%;
 
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 .socialButtonsHolder
@@ -388,7 +388,7 @@ section
     align-items: center;
     justify-content: center;
 
-    pointer-events: none;
+    cursor: pointer;
 
     z-index: 3;
 
@@ -421,15 +421,42 @@ section
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
 
+    -webkit-filter: drop-shadow(0 0 5px #000000);
+    filter: drop-shadow(0 0 5px #000000);
+
     margin-top: 1em;
     margin-bottom: 2em;
 }
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.scroll, .scroll a, .scroll a:visited, .scroll a:active, .carousel-control-prev, .carousel-control-next
+{
+    color: #808080;
+    mix-blend-mode: difference;
+}
+.scroll:after, .scroll a:after, .scroll a:visited:after, .scroll a:active:after, .carousel-control-prev:after, .carousel-control-next:after
+{
+    background-color: white;
+    color: #808080;
+}
+
 
 .project h1
 {
     margin-bottom: 1em;
 }
-.project ul
+ul
 {
     display: inline-block; 
 	text-align: left; 
