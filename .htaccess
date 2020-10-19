@@ -23,3 +23,5 @@ Redirect 301 /hold https://www.mitchel.bbsch.pl/projects/hold/index.html
 Redirect 301 /naszaporadnia https://www.naszaporadnia.net/
 
 Redirect 301 /noise https://www.mitchel.bbsch.pl/projects/noise/index.html
+
+Redirect 301 /bronx https://www.mitchel.bbsch.pl/projects/bronx/index.html
