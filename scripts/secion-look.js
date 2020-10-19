@@ -25,7 +25,7 @@ function UpdateSection(sectionId, contentUrl, showBackground, slideAnim)
             let classList = document.getElementById(sectionId).classList;
         
             //load section content
-            $('#'+sectionId).load(contentUrl);
+            LoadContent(sectionId, contentUrl);
 
             //Change background
             if(showBackground && !classList.contains("sectionBackground"))
@@ -135,5 +135,13 @@ function ShowBackToAboutMe(showAboutMeButton)
     }
 }
 
+function LoadContent(sectionId, contentUrl)
+{
+    $('#'+sectionId).load(contentUrl);
+}
+
 //Slide in on load
-window.onload = SlideIn(500, 700);
+if(!isMobile())
+{
+    window.onload = SlideIn(500, 700);
+}

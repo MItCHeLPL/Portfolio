@@ -76,7 +76,7 @@
 
                         <!--Dynamic content-->
                         <script>
-                            $('#left').load('about-me-en.html'); 
+                            $('#left').load('about-me.html'); 
                         </script>
 
                     </div>
@@ -84,8 +84,8 @@
                     <!--Back to about me button-->
                     <div id="showAboutMe"
                         onclick="
-                        UpdateSection('left', 'about-me-en.html', true, true); 
-                        UpdateSection('right', 'project-list-en.html', false); 
+                        UpdateSection('left', 'about-me.html', true, true); 
+                        UpdateSection('right', 'project-list.html', false); 
                         ShowBackToAboutMe(false);
                         ScrollTo('project-listTop', true, 450);
                         ">
@@ -101,7 +101,7 @@
 
                         <!--Dynamic content-->
                         <script>
-                            $('#right').load('project-list-en.html'); 
+                            $('#right').load('project-list.html'); 
                         </script>
 
                     </div>
@@ -142,9 +142,9 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
         <!--Other-->
+        <script src="scripts/mobile-detector.js"></script>
         <script src="scripts/secion-look.js"></script>
         <script src="scripts/scroll-to-element.js"></script>
-        <script src="scripts/mobile-detector.js"></script>
         <script src="scripts/show-iframe.js"></script>
 
     </body>
