@@ -150,7 +150,7 @@ function InitialLoad()
     var search = window.location.search;
 
     //main page
-    if(search == "")
+    if(search == "" || search.substring(1, 6) != "pages")
     {
         UpdateSection('left', 'about-me.html', true, true, false); 
         UpdateSection('right', 'project-list.html', false, false, false);
