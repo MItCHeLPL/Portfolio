@@ -56,6 +56,9 @@
 
         <!--JQuery import-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!--Custom-->
+        <script src="scripts/mobile-detector.js"></script>
+        <script src="scripts/secion-look.js"></script>
 
         <title>Michał Myszor</title>
     </head>
@@ -75,19 +78,18 @@
                     <div id="left" class="left justify-content-center sectionBackground">
 
                         <!--Dynamic content-->
-                        <script>
-                            $('#left').load('about-me.html'); 
-                        </script>
 
                     </div>
 
                     <!--Back to about me button-->
                     <div id="showAboutMe"
                         onclick="
-                        UpdateSection('left', 'about-me.html', true, true); 
-                        UpdateSection('right', 'project-list.html', false); 
+                        window.location.search = '';
+                        UpdateSection('left', 'about-me.html', true, true, false); 
+                        UpdateSection('right', 'project-list.html', false, false, false);  
                         ShowBackToAboutMe(false);
                         ScrollTo('project-listTop', true, 450);
+                        
                         ">
                         <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-arrow-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
@@ -100,9 +102,6 @@
                     <div id="right" class="right justify-content-center">
 
                         <!--Dynamic content-->
-                        <script>
-                            $('#right').load('project-list.html'); 
-                        </script>
 
                     </div>
 
@@ -142,8 +141,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
         <!--Other-->
-        <script src="scripts/mobile-detector.js"></script>
-        <script src="scripts/secion-look.js"></script>
         <script src="scripts/scroll-to-element.js"></script>
         <script src="scripts/show-iframe.js"></script>
 

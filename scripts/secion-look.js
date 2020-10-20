@@ -1,4 +1,4 @@
-function UpdateSection(sectionId, contentUrl, showBackground, slideAnim)
+function UpdateSection(sectionId, contentUrl, showBackground, slideAnim, addToHistory)
 {
     //animation duration
     let animTime = 400;
@@ -25,7 +25,7 @@ function UpdateSection(sectionId, contentUrl, showBackground, slideAnim)
             let classList = document.getElementById(sectionId).classList;
         
             //load section content
-            LoadContent(sectionId, contentUrl);
+            LoadContent(sectionId, contentUrl, addToHistory);
 
             //Change background
             if(showBackground && !classList.contains("sectionBackground"))
@@ -135,13 +135,72 @@ function ShowBackToAboutMe(showAboutMeButton)
     }
 }
 
-function LoadContent(sectionId, contentUrl)
+function LoadContent(sectionId, contentUrl, addToHistory)
 {
-    $('#'+sectionId).load(contentUrl);
+    if(addToHistory)
+    {
+        history.pushState(contentUrl, null, "?"+contentUrl);
+    }
+
+    $('#'+sectionId).load(contentUrl);  
 }
 
-//Slide in on load
-if(!isMobile())
+function InitialLoad()
 {
-    window.onload = SlideIn(500, 700);
+    var search = window.location.search;
+
+    //main page
+    if(search == "")
+    {
+        UpdateSection('left', 'about-me.html', true, true, false); 
+        UpdateSection('right', 'project-list.html', false, false, false);
+        ShowBackToAboutMe(false);
+    }
+    //project page
+    else
+    {
+        var contentUrl = search.substring(1, 1 + search.length);
+
+        history.pushState(contentUrl, null, search);
+
+        UpdateSection('left', 'project-list.html', false, false, false); 
+        UpdateSection('right', contentUrl, true, true, false);
+        ShowBackToAboutMe(true);
+        ScrollTo('projectTop', true, 450);
+    }
 }
+
+//On load
+window.onload = function()
+{
+    InitialLoad();
+
+    if(!isMobile())
+    {
+        //Slide in on load
+        SlideIn(500, 700);
+    }
+};
+
+
+//On history back/forward
+window.addEventListener('popstate', function(e){
+    var character = e.state;
+
+    //Project page
+    if (character != null) 
+    {
+        UpdateSection('left', 'project-list.html', false, false, false); 
+        UpdateSection('right', character, true, true, false);
+        ShowBackToAboutMe(true);
+        ScrollTo('projectTop', true, 450);
+    } 
+    //Main page
+    else
+    {
+        UpdateSection('left', 'about-me.html', true, true, false); 
+        UpdateSection('right', 'project-list.html', false, false, false); 
+        ShowBackToAboutMe(false);
+        ScrollTo('project-listTop', true, 450);
+    }
+});
