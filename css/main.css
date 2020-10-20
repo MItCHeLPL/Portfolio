@@ -316,6 +316,14 @@ section
     flex: 0 0 200px;
 
     margin: .25em;
+
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+.socialButton:hover
+{
+    -webkit-filter: invert(0);
+    filter: invert(0);
 }
 .socialButton:after{
     content:'';

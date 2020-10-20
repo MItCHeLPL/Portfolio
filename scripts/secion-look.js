@@ -170,6 +170,16 @@ function InitialLoad()
     }
 }
 
+//Open in new tab with middle click
+function OpenInNewTab(url)
+{
+    var e = window.event;
+    if(e.which==2)
+    {
+        window.open('?' + url, '_blank');
+    }
+}
+
 //On load
 window.onload = function()
 {
