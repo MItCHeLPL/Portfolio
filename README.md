@@ -1,4 +1,4 @@
 # Portfolio
 
 My official portfolio website containing all of my projects.  
-[LINK](https://mitchel.bbsch.pl/)
+[LINK](https://mitchelpl.github.io/Portfolio/)

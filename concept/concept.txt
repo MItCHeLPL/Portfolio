@@ -1,7 +1,0 @@
-?Animowane strzałki na segmentach.
-
-?Użyć gdzieś longpress.
-
-?Lekkie przesunięcia panelów na lewo i prawo przy hoverze.
-
-EN/PL.
