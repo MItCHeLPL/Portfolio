@@ -456,6 +456,13 @@ section
 	height: 100%;
 }
 
+.carousel-item, .carousel-item a img
+{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
 .scroll, .scroll a, .scroll a:visited, .scroll a:active, .carousel-control-prev, .carousel-control-next
 {
     color: #808080;
