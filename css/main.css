@@ -356,6 +356,12 @@ section
     margin-bottom: 1em;
 }
 
+#project-listTop h2
+{
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
 .projectButton
 {
     width: 80%;
