@@ -76,6 +76,22 @@ footer, footer a:visited, footer a:link
     color: #838383;
 }
 
+div:has(.source)
+{
+    display: inline-block; 
+    position: relative;
+}
+.source
+{
+    font-style: italic;
+    font-size: 12px;
+    color: darkgray;
+    position: absolute;
+    bottom: 40px;
+    right: 50%;
+    transform: translateX(50%);
+}
+
 
 /*Animations*/
 /*OnEnter*/
