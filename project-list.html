@@ -7,6 +7,22 @@
     <div class="project-list">
 
         <div class="projectButton" title="Gorilla Attack"
+            onmouseup="OpenInNewTab('pages/electriciansimulatorvr.html');"
+            onclick="
+            UpdateSection('right', 'pages/electriciansimulatorvr.html', true, false, true); 
+            UpdateSection('left', 'project-list.html', false, true, false); 
+            ShowBackToAboutMe(true);
+            ScrollTo('projectTop', true, 450);
+            ">
+
+            <div class="projectButtonTop">
+                Electrician Simulator VR
+            </div>
+            <div class="projectButtonBackground" style="background-image: url('images/projects/electriciansimulatorvr.jpg');"></div>
+
+        </div>
+
+        <div class="projectButton" title="Gorilla Attack"
             onmouseup="OpenInNewTab('pages/gorillaattack.html');"
             onclick="
             UpdateSection('right', 'pages/gorillaattack.html', true, false, true); 
