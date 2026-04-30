@@ -3,7 +3,17 @@
     <section>
 
         <figure>
-            <img src="images/logo.jpg" alt="logo" class="rounded-circle logoImg" />
+            <video id="backgroundLogo" autoplay muted loop poster="images/logo.jpg" preload="none" class="rounded-circle logoImg" style="aspect-ratio: 1 / 1; background-color: black; object-fit: cover; object-position: center;">
+                <source src="images/logoAnim.mp4" alt="logo" type="video/mp4" />
+            </video>
+            <script>
+                const video = document.getElementById('backgroundLogo');
+                video.addEventListener('loadedmetadata', () => {
+                  video.currentTime = 4.5;
+                });
+            </script>
+            <!--<img src="images/logo.svg" alt="logo" class="rounded-circle logoImg" style="aspect-ratio: 1 / 1; background-color: black;" />-->
+            <!--<img src="images/logo.jpg" alt="logo" class="rounded-circle logoImg" />-->
 
             <figcaption>
                 <h1>Michał Myszor</h1>
