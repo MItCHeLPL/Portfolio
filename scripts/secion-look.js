@@ -198,7 +198,7 @@ window.addEventListener('popstate', function(e){
     var character = e.state;
 
     //Project page
-    if (character != null) 
+    if (character != null && Object.keys(character).length !== 0) 
     {
         UpdateSection('left', 'project-list.html', false, false, false); 
         UpdateSection('right', character, true, true, false);

@@ -88,7 +88,7 @@
                     <div id="showAboutMe"
                         onmouseup="OpenInNewTab('');"
                         onclick="
-                        window.location.search = '';
+                        window.history.pushState(null, '', window.location.pathname);
                         UpdateSection('left', 'about-me.html', true, true, false); 
                         UpdateSection('right', 'project-list.html', false, false, false);  
                         ShowBackToAboutMe(false);
