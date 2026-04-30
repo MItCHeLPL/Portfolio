@@ -6,6 +6,23 @@
 
     <div class="project-list">
 
+
+        <div class="projectButton" title="The Stairwell"
+            onmouseup="OpenInNewTab('pages/thestairwell.html');"
+            onclick="
+            UpdateSection('right', 'pages/thestairwell.html', true, false, true); 
+            UpdateSection('left', 'project-list.html', false, true, false); 
+            ShowBackToAboutMe(true);
+            ScrollTo('projectTop', true, 450);
+            ">
+
+            <div class="projectButtonTop">
+                The Stairwell
+            </div>
+            <div class="projectButtonBackground" style="background-image: url('images/projects/thestairwell.jpg');"></div>
+
+        </div>
+
         <div class="projectButton" title="Before Exit: Gas Station"
             onmouseup="OpenInNewTab('pages/beforeexitgasstation.html');"
             onclick="
