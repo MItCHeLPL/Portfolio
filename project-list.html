@@ -7,6 +7,22 @@
     <div class="project-list">
 
 
+        <div class="projectButton" title="The Green Light"
+            onmouseup="OpenInNewTab('pages/thegreenlight.html');"
+            onclick="
+            UpdateSection('right', 'pages/thegreenlight.html', true, false, true); 
+            UpdateSection('left', 'project-list.html', false, true, false); 
+            ShowBackToAboutMe(true);
+            ScrollTo('projectTop', true, 450);
+            ">
+
+            <div class="projectButtonTop">
+                The Green Light
+            </div>
+            <div class="projectButtonBackground" style="background-image: url('images/projects/thegreenlight.jpg');"></div>
+
+        </div>
+
         <div class="projectButton" title="Do You Even Forklift?"
             onmouseup="OpenInNewTab('pages/doyouevenforklift.html');"
             onclick="
@@ -17,7 +33,7 @@
             ">
 
             <div class="projectButtonTop">
-                Do You Even Forklift?
+                Do You Even Forklift
             </div>
             <div class="projectButtonBackground" style="background-image: url('images/projects/doyouevenforklift.jpg');"></div>
 
